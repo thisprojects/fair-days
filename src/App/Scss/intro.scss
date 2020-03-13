@@ -1,0 +1,18 @@
+.intro {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+  p {
+    margin: 15px 0px 0px 0px;
+  }
+  ul {
+    margin: 5px;
+  }
+  h3 {
+    margin: 5px 0px 20px 0px;
+  }
+  h4 {
+    margin: 5px 0px 5px 0px;
+  }
+}

@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+$raleway: "Raleway", sans-serif;
+$textColour: dimgray;
+
+@import "./Scss/input";
+@import "./Scss/intro";
+@import "./Scss/weather-cards";
+@import "./Scss/fade.scss";
+
+body {
+  font-family: $raleway;
+  color: $textColour;
+}
+
+header {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.fair-days {
+  margin-bottom: 0;
+}
+
+.title {
+  padding: 20px;
+  flex: 1 1 20%;
+}
+
+.errors {
+  color: red;
+  text-align:center;
+}
+
+@media screen and (min-width: 1300px) {
+  .weather-cards-wrapper {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .location-input {
+    text-align: center;
+    width: 100%;
+  }
+
+  .title {
+    padding-bottom: 20px;
+  }
+
+  .weather-cards-wrapper {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  body {
+    font-size: 0.8em
+  }
+
+  .location-input {
+    input {
+      width: 60%;
+    }
+  }
+}

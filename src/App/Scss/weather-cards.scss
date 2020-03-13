@@ -1,0 +1,30 @@
+.card {
+  background: white;
+  padding: 10px 40px 10px 40px;
+  border-radius: 10px;
+  flex: 1 1 15%;
+  border: 2px solid lightgray;
+  margin: 5px;
+}
+
+.weather-cards-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.temperature-card-item {
+  margin-right: 20px;
+}
+
+.card-item {
+  display: flex;
+  justify-content: center;
+  padding: 5px 0px 5px 10px;
+  font-size: 0.8em;
+  p {
+    margin-top: 20px;
+  }
+}
