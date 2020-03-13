@@ -4,11 +4,11 @@
 
 ### Where to find stuff...
 
-App/index.js is the root component 
-App/Utils contains the network request functions and unix time converter utility
-App/index.scss contains the scss for the root component and imports from App/scss
-App/Scss contains individual scss file for each major component 
-App/Components ...I guess this is self explanatory? 😁
+App/index.js is the root component   
+App/Utils contains the network request functions and unix time converter utility  
+App/index.scss contains the scss for the root component and imports from App/scss  
+App/Scss contains individual scss file for each major component   
+App/Components ...I guess this is self explanatory? 😁  
 
 ### Todo : 
 
