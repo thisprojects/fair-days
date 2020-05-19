@@ -59,15 +59,15 @@ class FairDays extends Component {
     const WeatherSummary = () => (
       <div>
         <p>
-          Over the next 8 days there will be {goodWeatherDays.length} good
-          weather days in {address}.
+          Over the next 8 days there will be { goodWeatherDays.length } good
+          weather days in { address }.
         </p>
       </div>
     );
 
     const Loading = () => (
       <h2>
-        <FontAwesomeIcon size="2x" color="gray" icon={faSpinner} pulse />
+        <FontAwesomeIcon size="2x" color="gray" icon={ faSpinner } pulse />
       </h2>
     );
 
@@ -90,7 +90,7 @@ class FairDays extends Component {
           </div>
           <Input fetchWeather={ this.fetchAndCacheWeatherForcast } />
         </header>
-        {showIntro && <Intro />}
+        { showIntro && <Intro /> }
         <Fade showComponent={ this.state.loading } duration={ "0.2s" }>
           <Loading />
         </Fade>
