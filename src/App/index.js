@@ -12,17 +12,17 @@ class FairDays extends Component {
     cachedResults: {},
     currentResult: {},
     errors: false,
-    loading: false
+    loading: false,
   };
 
-  resultIsCached = inputValue => this.state.cachedResults[inputValue];
+  resultIsCached = (inputValue) => this.state.cachedResults[inputValue];
 
-  fetchAndCacheWeatherForcast = async inputValue => {
+  fetchAndCacheWeatherForcast = async (inputValue) => {
     this.setState({ errors: false });
     // Display cached results, if they exist.
     if (this.resultIsCached(inputValue)) {
       this.setState({
-        currentResult: this.state.cachedResults[inputValue]
+        currentResult: this.state.cachedResults[inputValue],
       });
     } else {
       //Otherwise fetch ,cache and display results.
@@ -44,7 +44,7 @@ class FairDays extends Component {
       this.state.currentResult != undefined && this.state.currentResult;
 
     const goodWeatherDays = forcasts.filter(
-      day =>
+      (day) =>
         day.precipProbability < 0.25 &&
         day.cloudCover < 0.7 &&
         day.temperatureHigh >= 49
@@ -59,15 +59,15 @@ class FairDays extends Component {
     const WeatherSummary = () => (
       <div>
         <p>
-          Over the next 8 days there will be { goodWeatherDays.length } good
-          weather days in { address }.
+          Over the next 8 days there will be {goodWeatherDays.length} good
+          weather days in {address}.
         </p>
       </div>
     );
 
     const Loading = () => (
       <h2>
-        <FontAwesomeIcon size="2x" color="gray" icon={ faSpinner } pulse />
+        <FontAwesomeIcon size="2x" color="gray" icon={faSpinner} pulse />
       </h2>
     );
 
@@ -88,15 +88,15 @@ class FairDays extends Component {
             <h1 className="fair-days">Fair Days</h1>
             <span>Weather Forcast</span>
           </div>
-          <Input fetchWeather={ this.fetchAndCacheWeatherForcast } />
+          <Input fetchWeather={this.fetchAndCacheWeatherForcast} />
         </header>
-        { showIntro && <Intro /> }
-        <Fade showComponent={ this.state.loading } duration={ "0.2s" }>
+        {showIntro && <Intro />}
+        <Fade showComponent={this.state.loading} duration={"0.2s"}>
           <Loading />
         </Fade>
-        <Fade duration={ "1.0s" } showComponent={ showWeatherCards }>
+        <Fade duration={"1.0s"} showComponent={showWeatherCards}>
           <WeatherSummary />
-          <WeatherCards goodWeatherDays={ goodWeatherDays } />
+          <WeatherCards goodWeatherDays={forcasts} />
         </Fade>
         <Errors />
       </div>
